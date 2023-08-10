@@ -50,8 +50,8 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
-.txt
-GuidanceForMe.txt
+*.txt
+.GuidanceForMe.txt
 # Translations
 *.mo
 *.pot
