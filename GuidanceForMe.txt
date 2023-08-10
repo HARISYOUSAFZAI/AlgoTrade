@@ -16,5 +16,5 @@ GIT > git status (will show the status of the repository in github)
     > git commit -m "message" (to create version/commit all changes in the project)
     > git push origin main (to send version/changes to github)
     > git remote -v (to check remote url)
-    ghfhfhf
-ffftf
+
+
