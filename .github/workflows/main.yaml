@@ -1,0 +1,40 @@
+Your workflow name.
+name: AlgoTrade deploy to heroku.
+
+# Run workflow on every push to main branch
+on:
+  push:
+    branches: [main]
+
+# Your workflows jobs.
+
+jobs:
+  build:
+    runs-on: ubauntu-latest
+    steps:
+      #Check-out your repository.
+      - name: Checkout
+        uses: actions/checkout@v2
+
+# IMPORTAN PART 
+      - name: Build, Push and Release a Docker container to Heroku. # Your custom step name 
+        uses: gonuit/heroku-docker-deploy@1.3.3 # GitHub action name, it is uild by third party
+        with:  
+          # Provide the variables for your Heroku app.
+          # - email address
+          email: ${{secrets.HEROKU_EMAIL}} 
+          # - Heroku API key 
+          heroku_api_key: ${{secrets.HEROKU_API_KEY_ALGOTRADE}}
+          # - Name of the heroku application name
+          heroku_app_name:  ${{secrets.HEROKU_ALGOTRADE_APP_NAME}}
+          # - Dockerfile name.(Optionsl, default: "./")
+          dockerfile_directory: ./
+          dockerfile_name: Dockerfile
+          # - Additional optons of docker build command (optional, default: "") 
+          docker_options: "--no-cache"
+          # - (optiona, default: "web") for more information: https://devcenter.heroku.com/articles/process-model
+          process-type: web
+          
+           
+
+          
