@@ -26,9 +26,9 @@ jobs:
           # - Heroku API key 
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           # - Name of the heroku application name
-          heroku_app_name:  ${{secrets.HEROKU_APP_NAME}}
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
           # - Dockerfile name.(Optionsl, default: "./")
-          #dockerfile_directory: ./
+          dockerfile_directory: ./
           dockerfile_name: Dockerfile
           # - Additional optons of docker build command (optional, default: "") 
           docker_options: "--no-cache"
