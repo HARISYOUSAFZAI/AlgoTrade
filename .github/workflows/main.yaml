@@ -32,7 +32,7 @@ jobs:
           dockerfile_name: Dockerfile
           # - Additional optons of docker build command (optional, default: "") 
           docker_options: "--no-cache"
-          # - (optiona, default: "web") for more information: https://devcenter.heroku.com/articles/process-model
+          # - (optiona, default: "web") for more informatioon: https://devcenter.heroku.com/articles/process-model
           process-type: web
 
 
