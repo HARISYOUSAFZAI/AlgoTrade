@@ -24,9 +24,9 @@ jobs:
           # - email address
           email: ${{secrets.HEROKU_EMAIL}} 
           # - Heroku API key 
-          heroku_api_key: ${{secrets.HEROKU_API_KEY_ALGOTRADE}}
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           # - Name of the heroku application name
-          heroku_app_name:  ${{secrets.HEROKU_ALGOTRADE_APP_NAME}}
+          heroku_app_name:  ${{secrets.HEROKU_APP_NAME}}
           # - Dockerfile name.(Optionsl, default: "./")
           dockerfile_directory: ./
           dockerfile_name: Dockerfile
@@ -34,7 +34,7 @@ jobs:
           docker_options: "--no-cache"
           # - (optiona, default: "web") for more information: https://devcenter.heroku.com/articles/process-model
           process-type: web
-          
-           
+
+
 
           
